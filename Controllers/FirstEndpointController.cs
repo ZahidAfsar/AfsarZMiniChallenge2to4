@@ -18,7 +18,7 @@ namespace AfsarZMiniChallenge2to4.Controllers;
         [HttpGet]
         [Route("NumReturn/{numOne}/{numTwo}")]
 
-        public List<string> NumReturn(int numOne, int numTwo)
+        public string NumReturn(string numOne, string numTwo)
         {
             return _firstService.NumReturn(numOne, numTwo);
         }

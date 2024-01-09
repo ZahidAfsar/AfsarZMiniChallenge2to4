@@ -5,11 +5,19 @@ namespace AfsarZMiniChallenge2to4.Services;
 
 public class FirstService : IFirstService
 {
-    public List<string> add = new();
-    public List<string> NumReturn(int numOne, int numTwo)
+    public string NumReturn(string numOne, string numTwo)
     {
-       int total = numOne + numTwo;
-        add.Add($"{numOne} + {numTwo} = {total}");
-        return add;
+        int OneInt;
+        bool isNumTrue = int.TryParse(numOne, out OneInt);
+
+        int TwoInt;
+        bool isNumTwoTrue = int.TryParse(numTwo, out TwoInt);
+
+        if(isNumTrue && isNumTwoTrue)
+        {
+            return $"{OneInt} + {TwoInt} is {OneInt + TwoInt}";
+        }else{
+            return "Please enter an Integer Value";
+        }
     }
 }

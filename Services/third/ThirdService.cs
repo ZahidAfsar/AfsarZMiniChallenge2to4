@@ -1,22 +1,29 @@
 
+using System.Runtime.CompilerServices;
+
 namespace AfsarZMiniChallenge2to4.Services.third;
 
 public class ThirdService : IThirdService
 {
-     public List<string> GreaterOrLess = new();
-    public List<string> NumCompare(int numOne, int numTwo)
+    public string CompareNums(string numOneString, string numTwoString)
     {
-        if( numOne > numTwo){
-                GreaterOrLess.Add($"{numOne} is greater than {numTwo}");
-                 GreaterOrLess.Add($"{numTwo} is less than {numOne}");
-            }else if(numOne < numTwo){
-                GreaterOrLess.Add($"{numOne} is less than {numTwo}");
-                GreaterOrLess.Add($"{numTwo} is greater than {numOne}");
-            }else{
-                GreaterOrLess.Add("Your first number is equal to your second");
-                GreaterOrLess.Add("Your second number is equal to your first");
+        int numOne;
+        int numTwo;
+        bool isNumOne = int.TryParse(numOneString, out numOne);
+        bool isNumTwo = int.TryParse(numTwoString, out numTwo);
 
+        if(isNumOne && isNumTwo){
+        if( numOne > numTwo){
+                return $"{numOne} is greater than {numTwo} and {numTwo} is less than {numOne}";
+            }else if(numOne < numTwo){
+                return $"{numOne} is less than {numTwo} and {numTwo} is greater than {numOne}";
+            }else{
+                return "Your first number is equal to your second and your second number is equal to your first";
             }
-            return GreaterOrLess;
+            }else{
+                return $"Please use a number";
+            }
+        }
     }
-}
+   
+

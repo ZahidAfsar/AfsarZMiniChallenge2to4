@@ -13,11 +13,11 @@ namespace AfsarZMiniChallenge2to4.Controllers;
     }
 
         [HttpGet]
-        [Route("NumCompare/{numOne}/{numTwo}")]
+        [Route("NumCompare/{numOneString}/{numTwoString}")]
 
-        public List<string> NumCompare(int numOne, int numTwo)
+        public string NumCompare(string numOneString, string numTwoString)
         {
-            return _thirdService.NumCompare(numOne, numTwo);
+            return _thirdService.CompareNums(numOneString, numTwoString);
         }
 
     }
