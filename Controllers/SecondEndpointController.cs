@@ -12,7 +12,7 @@ namespace AfsarZMiniChallenge2to4.Controllers;
         _secondService = SecondService;
     }
 
-        [HttpPost]
+        [HttpGet]
         [Route("NameReturn/{name}/{time}")]
 
         public List<string> NameReturn(string name, string time)

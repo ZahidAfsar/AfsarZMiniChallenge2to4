@@ -12,7 +12,7 @@ namespace AfsarZMiniChallenge2to4.Controllers;
         _thirdService = thirdService;
     }
 
-        [HttpPost]
+        [HttpGet]
         [Route("NumCompare/{numOne}/{numTwo}")]
 
         public List<string> NumCompare(int numOne, int numTwo)

@@ -8,7 +8,7 @@ public class ThirdService : IThirdService
     {
         if( numOne > numTwo){
                 GreaterOrLess.Add($"{numOne} is greater than {numTwo}");
-                 GreaterOrLess.Add($"{numTwo} is greater than {numOne}");
+                 GreaterOrLess.Add($"{numTwo} is less than {numOne}");
             }else if(numOne < numTwo){
                 GreaterOrLess.Add($"{numOne} is less than {numTwo}");
                 GreaterOrLess.Add($"{numTwo} is greater than {numOne}");
